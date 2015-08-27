@@ -3,3 +3,7 @@
 .classpath
 .idea
 .settings
+/target/
+/.classpath
+/.project
+/.settings
