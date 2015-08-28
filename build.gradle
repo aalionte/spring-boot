@@ -33,10 +33,10 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-rest")
     compile("org.springframework.boot:spring-boot-starter-jdbc")
     compile("org.springframework.boot:spring-boot-starter-mail")
-    compile("org.springframework.boot:spring-boot-starter-security")
     compile("org.springframework.boot:spring-boot-starter-social-facebook")
     compile("org.springframework.boot:spring-boot-starter-social-linkedin")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile group: 'javax.persistence', name: 'persistence-api', version: '1.0'
     runtime("org.hsqldb:hsqldb")
     runtime("org.postgresql:postgresql:9.4-1201-jdbc41")
     testCompile("org.springframework.boot:spring-boot-starter-test") 
