@@ -22,6 +22,9 @@
         <td th:text="${movie.releaseDate}"></td>
         <td th:text="${movie.rating}"></td>
         <td><a href="${movie.imdbLink}" th:text="${movie.imdbLink}"></a></td>
+        <td th:text="${#calendars.format(movie.releaseDate,'dd MMMM yyyy')}"></td>
+        <td th:text="${#numbers.formatDecimal(movie.rating,1,2,'COMMA')}"></td>
+        <td th:text="${movie.imdbLink}"></td>
       </tr>
     </table>
 </body>

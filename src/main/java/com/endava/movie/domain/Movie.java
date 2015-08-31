@@ -8,6 +8,8 @@ import java.util.Date;
 @Table(name = "demo_movies")
 public class Movie implements Serializable {
 
+	private static final long serialVersionUID = 4333221327481526569L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@SequenceGenerator(name = "demo_movies_id_seq", sequenceName = "demo_movies_id_seq", allocationSize = 1)

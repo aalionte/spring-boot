@@ -7,4 +7,8 @@
 /.classpath
 /.project
 /.settings
+<<<<<<< HEAD
 /build/
+=======
+/.springBeans
+>>>>>>> c33653129ea95cc6a934815c32c6fa8c913c3c61
