@@ -10,9 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.endava.movie.domain.Movie;
 import com.endava.movie.service.MovieService;
 
-/**
- * Created by aalionte on 8/27/2015.
- */
+
 @Controller
 public class HomeController {
 	
@@ -26,4 +24,6 @@ public class HomeController {
     	mv.addObject("movies", movies);
         return mv;
     }
+    
+    
 }
