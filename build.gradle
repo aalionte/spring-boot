@@ -28,16 +28,14 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-data-rest")
-    compile("org.springframework.boot:spring-boot-starter-jdbc")
-    compile("org.springframework.boot:spring-boot-starter-mail")
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
-    compile("org.springframework.boot:spring-boot-starter-social-facebook")
-    compile("org.springframework.boot:spring-boot-starter-social-linkedin")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile group: 'javax.persistence', name: 'persistence-api', version: '1.0'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-mail', version:'1.2.5.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version:'1.2.5.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'1.2.5.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version:'1.2.5.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version:'1.2.5.RELEASE'
+    compile group: 'com.mangofactory', name: 'swagger-springmvc', version:'1.0.2'
+    compile group: 'org.webjars', name: 'swagger-ui', version:'2.0.12'
     runtime("org.hsqldb:hsqldb")
     runtime("org.postgresql:postgresql:9.4-1201-jdbc41")
     testCompile("org.springframework.boot:spring-boot-starter-test") 
