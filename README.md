@@ -1,5 +1,4 @@
-# Spring Boot presentation: 
-*[link](https://docs.google.com/presentation/d/1uO_WO8GHi_BT2cBypQ7U3u8liYNGFSrP24UuCTlIVdQ/edit?usp=sharing)
+# Spring Boot presentation [here](https://docs.google.com/presentation/d/1uO_WO8GHi_BT2cBypQ7U3u8liYNGFSrP24UuCTlIVdQ/edit?usp=sharing)
 
 
 #How to run
