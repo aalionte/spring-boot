@@ -10,20 +10,18 @@ import org.springframework.web.servlet.ModelAndView;
 import com.endava.movie.domain.Movie;
 import com.endava.movie.service.MovieService;
 
-
 @Controller
 public class HomeController {
-	
+
 	@Autowired
 	MovieService movieService;
 
-    @RequestMapping(value="/")
-    public ModelAndView home(){
-    	ModelAndView mv = new ModelAndView("home");
-    	List<Movie> movies = movieService.getAllMovies();
-    	mv.addObject("movies", movies);
-        return mv;
-    }
-    
-    
+	@RequestMapping(value = "/")
+	public ModelAndView home() {
+		ModelAndView mv = new ModelAndView("home");
+		List<Movie> movies = movieService.getAllMovies();
+		mv.addObject("movies", movies);
+		return mv;
+	}
+
 }

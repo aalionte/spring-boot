@@ -12,22 +12,20 @@ import com.endava.movie.domain.Movie;
 @EnableTransactionManagement
 public class MovieDAO extends AbstractDAO<Movie> {
 
-    protected MovieDAO() {
-        super(Movie.class);
-    }
+	protected MovieDAO() {
+		super(Movie.class);
+	}
 
-    @SuppressWarnings("unchecked")
-    @Transactional
-    public List<Movie> getAllMovies() {
-        return em().createQuery("SELECT m FROM Movie m order by m.id desc")
-                .getResultList();
-    }
-    
-    @Transactional
-    public Movie getMovieById(long id) {
-        return (Movie) em().createQuery(
-                "SELECT m FROM Movie m WHERE m.id like :id")
-        .setParameter("id", id).getSingleResult();
-    }
+	@SuppressWarnings("unchecked")
+	@Transactional
+	public List<Movie> getAllMovies() {
+		return em().createQuery("SELECT m FROM Movie m order by m.id desc").getResultList();
+	}
+
+	@Transactional
+	public Movie getMovieById(long id) {
+		return (Movie) em().createQuery("SELECT m FROM Movie m WHERE m.id like :id").setParameter("id", id)
+				.getSingleResult();
+	}
 
 }

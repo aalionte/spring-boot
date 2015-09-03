@@ -17,25 +17,23 @@ import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-
-
 @Entity
 @Table(name = "demo_actors")
-public class Actor implements Serializable{
-	
+public class Actor implements Serializable {
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@SequenceGenerator(name = "demo_actors_id_seq", sequenceName = "demo_actors_id_seq", allocationSize = 1)
 	private Long id;
 
-	@Column(name="actor name")
+	@Column(name = "actor name")
 	private String name;
-	
-	@Column(name="actor_bio")
+
+	@Column(name = "actor_bio")
 	private String biography;
-	
+
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name="dream_movies_actors", joinColumns=@JoinColumn(name="id_actor"))
+	@JoinTable(name = "dream_movies_actors", joinColumns = @JoinColumn(name = "id_actor") )
 	private List<Movie> movies = new ArrayList<Movie>(0);
 
 	public Long getId() {

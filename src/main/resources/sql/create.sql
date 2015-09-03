@@ -11,7 +11,9 @@ WITH OWNER = demo
 DROP TABLE IF EXISTS demo_users;
 DROP TABLE IF EXISTS demo_movies;
 DROP TABLE IF EXISTS demo_actors;
+DROP TYPE IF EXISTS demo_role;
 
+CREATE TYPE role AS ENUM ('USER', 'ADMIN');
 
 CREATE TABLE IF NOT EXISTS demo_users (
   id SERIAL UNIQUE NOT NULL,
@@ -20,6 +22,7 @@ CREATE TABLE IF NOT EXISTS demo_users (
   user_password VARCHAR(70),
   user_first_name VARCHAR(100),
   user_last_name VARCHAR(100),
+  user_role role,
   PRIMARY KEY(id)
 );
 

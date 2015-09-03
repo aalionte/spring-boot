@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title></title>
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div th:include="includes/header :: header"></div>
+
+ <h1>User list</h1>
+
+    <table class="table table-striped">
+      <tr>
+        <th>EMAIL</th>
+        <th>USERNAME</th>
+        <th>ROLE</th>
+      </tr>
+      <tr th:each="user : ${users}">
+        <td th:text="${user.userEmail}"></td>
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.userRole}"></td>
+      </tr>
+    </table>
+</body>
+</html>

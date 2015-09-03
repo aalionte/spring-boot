@@ -1,8 +1,11 @@
 
 -- USERS
 INSERT INTO demo_users(
-        user_name, user_email, user_password, user_first_name, user_last_name)
-VALUES ('user', 'user@domain.com', '12345', 'first-name', 'last-name');
+        user_name, user_email, user_password, user_first_name, user_last_name, user_role)
+VALUES ('user', 'user@domain.com', '827ccb0eea8a706c4c34a16891f84e7b', 'first-name', 'last-name','USER');
+INSERT INTO demo_users(
+        user_name, user_email, user_password, user_first_name, user_last_name, user_role)
+VALUES ('admin', 'admin@domain.com', '827ccb0eea8a706c4c34a16891f84e7b', 'admin-first-name', 'admin-last-name','ADMIN');
 
 
 -- MOVIES    

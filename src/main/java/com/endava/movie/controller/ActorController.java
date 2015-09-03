@@ -12,7 +12,7 @@ import com.endava.movie.service.ActorService;
 
 @Controller
 public class ActorController {
-	
+
 	@Autowired
 	ActorService actorService;
 

@@ -14,7 +14,7 @@ import com.endava.movie.DemoApplication;
 @WebAppConfiguration
 public class DemoApplicationTests {
 
-	//@Test
+	// @Test
 	@Ignore
 	public void contextLoads() {
 	}

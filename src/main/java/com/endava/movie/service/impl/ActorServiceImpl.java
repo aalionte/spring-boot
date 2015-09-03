@@ -14,7 +14,7 @@ public class ActorServiceImpl implements ActorService {
 
 	@Autowired
 	ActorDAO actorDAO;
-	
+
 	@Override
 	public List<Actor> getAllActors() {
 		return actorDAO.getAllActors();

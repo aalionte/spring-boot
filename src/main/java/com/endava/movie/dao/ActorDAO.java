@@ -13,7 +13,6 @@ import com.endava.movie.domain.Actor;
 @EnableTransactionManagement
 public class ActorDAO extends AbstractDAO<Actor> {
 
-	
 	protected ActorDAO() {
 		super(Actor.class);
 	}
