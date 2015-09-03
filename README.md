@@ -3,8 +3,13 @@ This project is a demo project for Spring-Boot.
 It was build with maven and it is conceived to illustrate most of the Spring Boot features presented  [here](https://docs.google.com/presentation/d/1uO_WO8GHi_BT2cBypQ7U3u8liYNGFSrP24UuCTlIVdQ/edit?usp=sharing)
 
 #How to run
+Maven
 * build: mvn package
 * run java -jar target/demo-0.0.1-SNAPSHOT.jar
+
+Gradle
+* build: gradle build
+* run: java -jar build/libs/demo-0.0.1-SNAPSHOT.jar
 
 #Pages
 * Home page: /movie-catalog/ 
