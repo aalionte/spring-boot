@@ -1,0 +1,7 @@
+{
+    "com": {
+        "this": "com/endava/movie",
+        "dependencies": {
+        }
+    }
+}

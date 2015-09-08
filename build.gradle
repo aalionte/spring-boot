@@ -21,11 +21,13 @@ jar {
     baseName = 'demo'
     version = '0.0.1-SNAPSHOT'
 }
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -34,6 +36,9 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'1.2.5.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version:'1.2.5.RELEASE'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version:'1.2.5.RELEASE'
+    
+    compile group: 'com.ofg', name: 'micro-infra-spring-boot-starter', version:'0.8.20'
+    
     compile group: 'com.mangofactory', name: 'swagger-springmvc', version:'1.0.2'
     compile group: 'org.webjars', name: 'swagger-ui', version:'2.0.12'
     runtime("org.hsqldb:hsqldb")
@@ -47,6 +52,11 @@ eclipse {
          containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
          containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
     }
+}
+
+test {
+   // set a system property for the test JVM(s)
+  systemProperty 'APP_ENV', 'dev'
 }
 
 task wrapper(type: Wrapper) {
