@@ -5,11 +5,11 @@ It was build with maven and it is conceived to illustrate most of the Spring Boo
 #How to run
 Maven
 * build: mvn package
-* run java -jar target/demo-0.0.1-SNAPSHOT.jar
+* run java -jar -DAPP_ENV="dev" target/demo-0.0.1-SNAPSHOT.jar
 
 Gradle
 * build: gradle build
-* run: java -jar build/libs/demo-0.0.1-SNAPSHOT.jar
+* run: java -jar -DAPP_ENV="dev"  build/libs/demo-0.0.1-SNAPSHOT.jar
 
 #Pages
 * Home page: /movie-catalog/ 
