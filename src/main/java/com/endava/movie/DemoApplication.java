@@ -1,4 +1,5 @@
 package com.endava.movie;
+
 import static com.ofg.config.BasicProfiles.DEVELOPMENT;
 import static com.ofg.config.BasicProfiles.PRODUCTION;
 import static com.ofg.config.BasicProfiles.TEST;
@@ -16,22 +17,16 @@ import com.ofg.infrastructure.environment.EnvironmentSetupVerifier;
 
 @SpringBootApplication
 @ComponentScan
-//@EnableMicroservice
+@EnableMicroservice
 public class DemoApplication {
-	
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(DemoApplication.class);
 
 	public static void main(String[] args) {
-//		
-//		for(String arg : args){
-//			LOGGER.debug(arg);
-//		}
-////		
-//		SpringApplication application = new SpringApplication(DemoApplication.class);
-//        application.addListeners(new EnvironmentSetupVerifier(Arrays.asList(DEVELOPMENT, PRODUCTION, TEST)));
-//        application.run(args);
-//		
-		
-		SpringApplication.run(DemoApplication.class, args);
+
+		SpringApplication application = new SpringApplication(DemoApplication.class);
+		application.addListeners(new EnvironmentSetupVerifier(Arrays.asList(DEVELOPMENT, PRODUCTION, TEST)));
+		application.run(args);
+
 	}
 }
